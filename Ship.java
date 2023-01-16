@@ -10,6 +10,7 @@ public class Ship extends Actor
 {
     private int targetx=0, targety=0;
     private int jeda=0;
+    private boolean toRemove=false;
     
     public void addedToWorld(World Galaxy)
     {
@@ -46,5 +47,7 @@ public class Ship extends Actor
         }
         move();
         if(jeda>0)jeda--;
+        if(jeda==1)getWorld().addObject(new Laser(),getX()+100,getY());
+        if(jeda==0)jeda=40;
     }
 }
