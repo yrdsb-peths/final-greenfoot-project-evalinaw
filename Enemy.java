@@ -13,6 +13,8 @@ public class Enemy extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private int vx=0;
+    private boolean toRemove=false;
+    
     public Enemy(int v)
     {
         vx=v;
@@ -21,10 +23,21 @@ public class Enemy extends Actor
     public void move()
     {
         setLocation(getX()+vx,getY());
+        if(getX()<-200)toRemove=true;
+    }
+    
+    public void Soop()
+    {
+        for(int i=0; i<10;i++)
+        {
+            getWorld().addObject(new Pocca(getImage()));
+        }
+        toRemove=true;
     }
     
     public void act()
     {
-        move();
+        if(!toRemove)move();
+        else getWorld().removeObject(this);
     }
 }
