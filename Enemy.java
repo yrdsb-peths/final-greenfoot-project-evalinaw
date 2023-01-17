@@ -23,15 +23,24 @@ public class Enemy extends Actor
     public void move()
     {
         setLocation(getX()+vx,getY());
-        if(getX()<-200)toRemove=true;
+        Actor actor = getOneIntersectingObject(Ship.class);
+        if(actor!=null)
+        {
+            ((Ship)actor).Soop(); 
+            Soop();
+        }
+        if(getX()<-100)toRemove=true;
     }
     
     public void Soop()
     {
         for(int i=0; i<10;i++)
         {
-            getWorld().addObject(new Pocca(getImage()));
+            int px=Greenfoot.getRandomNumber(40);
+            int py=Greenfoot.getRandomNumber(40);
+            getWorld().addObject(new Pocca(getImage()),getX()+px,py);
         }
+        getWorld().addObject(new Bunda(),getX(),getY());
         toRemove=true;
     }
     

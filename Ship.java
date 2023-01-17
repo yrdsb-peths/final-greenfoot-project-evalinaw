@@ -17,6 +17,18 @@ public class Ship extends Actor
         targetx=getX();targety=getY();
     }
     
+    public void Soop()
+    {
+        for(int i=0; i<10;i++)
+        {
+            int px=Greenfoot.getRandomNumber(40);
+            int py=Greenfoot.getRandomNumber(40);
+            getWorld().addObject(new Pocca(getImage()),getX()+px,py);
+        }
+        getWorld().addObject(new Bunda(),getX(),getY());
+        toRemove=true;
+    }
+    
     public void move()
     {
         double rx=targetx-getX();
@@ -49,5 +61,6 @@ public class Ship extends Actor
         if(jeda>0)jeda--;
         if(jeda==1)getWorld().addObject(new Laser(),getX()+100,getY());
         if(jeda==0)jeda=40;
+        if(toRemove)getWorld().removeObject(this);
     }
 }
