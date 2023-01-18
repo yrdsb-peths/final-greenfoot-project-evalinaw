@@ -1,6 +1,6 @@
 #Greenfoot project file
-class.Enemy.image=paddle.PNG
-class.Human.image=paddle.PNG
+class.Enemy.image=PADDLE2.png
+class.Human.image=PADDLE1.png
 class.PingPong.image=ball.PNG
 class.PongTable.image=table.PNG
 dependency1.from=PongTable
