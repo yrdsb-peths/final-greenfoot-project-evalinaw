@@ -31,10 +31,10 @@ public class PongTable extends World
         addObject(pingPong, getWidth()/2, getHeight()/2);
         read1.drawString(pScore,2,20);
         s1.setImage(read1);
-        addObject(s1,getWidth()/4,50);
+        addObject(s1,175,50);
         read2.drawString(cScore, 2, 20);
         s2.setImage(read2);
-        addObject(s2,(getWidth()/4)*3,50);
+        addObject(s2,455,50);
         Greenfoot.setSpeed(45);
     }
     public void act(){
