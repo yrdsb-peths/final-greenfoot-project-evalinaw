@@ -17,14 +17,23 @@ public class TitleScreen extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(550, 400, 1); 
+        prepare();
     }
+
     public void act()
     {
         // Start the game if user presses the space bar.
         if(Greenfoot.isKeyDown("space"))
         {
-            PongTable gameWorld = new PongTable();
-            Greenfoot.setWorld(gameWorld);
+            Instructions instructions = new Instructions();
+            Greenfoot.setWorld(instructions);
         }
+    }
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    private void prepare()
+    {
     }
 }

@@ -90,8 +90,9 @@ public class PongTable extends World
                 read1.drawString(pScore,2,20);
                 s1.setImage(read1);
             }
-            if(p == 3 || c == 3){
-                Greenfoot.stop();
+            if(p == 5 || c == 5){
+                GameOver gameWorld = new GameOver();
+                Greenfoot.setWorld(gameWorld);
             }
             pingPong.setLocation(getWidth()/2, getHeight()/2);
             human.setLocation(50, getHeight()/2);
@@ -100,5 +101,17 @@ public class PongTable extends World
             
                 
         }
+        
     }
+    
+    public void gameOver()
+    {
+        Label gameOverLabel1 = new Label("┌── ⋆⋅☆⋅⋆ ──┐", 100);
+        Label gameOverLabel2 = new Label("game over !", 70);
+        Label gameOverLabel3 = new Label("└── ⋆⋅☆⋅⋆ ──┘", 100);
+        addObject(gameOverLabel3, 390, 200);
+        addObject(gameOverLabel2, 300, 150);
+        addObject(gameOverLabel1, 390, 100);
+    }
+    
 }
