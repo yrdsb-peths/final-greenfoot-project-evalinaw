@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class PongTable here.
+ * Tells the enemy robot to move towards the ball at a certain 
+ * pace, also ends the game once the score becomes 5 on player or enemy.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Wang 
+ * @version Jan 2023
  */
 public class PongTable extends World
 {
@@ -102,16 +103,6 @@ public class PongTable extends World
                 
         }
         
-    }
-    
-    public void gameOver()
-    {
-        Label gameOverLabel1 = new Label("┌── ⋆⋅☆⋅⋆ ──┐", 100);
-        Label gameOverLabel2 = new Label("game over !", 70);
-        Label gameOverLabel3 = new Label("└── ⋆⋅☆⋅⋆ ──┘", 100);
-        addObject(gameOverLabel3, 390, 200);
-        addObject(gameOverLabel2, 300, 150);
-        addObject(gameOverLabel1, 390, 100);
     }
     
 }

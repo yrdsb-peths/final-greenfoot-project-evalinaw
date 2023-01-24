@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class TitleScreen here.
+ * Welcomes the user into the game world Opia.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Wang 
+ * @version Jan 2023
  */
 public class TitleScreen extends World
 {
@@ -22,13 +22,14 @@ public class TitleScreen extends World
 
     public void act()
     {
-        // Start the game if user presses the space bar.
+        // Move onto the instructions if user presses the space bar.
         if(Greenfoot.isKeyDown("space"))
         {
             Instructions instructions = new Instructions();
             Greenfoot.setWorld(instructions);
         }
     }
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
