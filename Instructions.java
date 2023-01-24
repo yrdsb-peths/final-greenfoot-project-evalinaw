@@ -21,7 +21,7 @@ public class Instructions extends World
     
     public void act()
     {
-        if(Greenfoot.isKeyDown("space"))
+        if(Greenfoot.isKeyDown("x"))
         {
             PongTable gameWorld = new PongTable();
             Greenfoot.setWorld(gameWorld);
